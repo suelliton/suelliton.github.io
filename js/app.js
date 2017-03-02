@@ -2,7 +2,7 @@ angular.module("books",[]);
 angular.module("books").controller("books_controller",function($scope) {
 	$scope.teste = "testando";
 	$scope.books = [
-		{name:"A_Ciência_Secreta",pdf:"pdfs/A_Ciência_Secreta.pdf",image:"images/a_ciencia_secreta.jpeg"},
+		{name:"A_Ciência_Secreta",pdf:"pdfs/A_Ciência_Secreta.pdf",image:"images/a_ciencia_secreta.jpg"},
 		{name:"Teoria_das_cordas",pdf:"pdfs/Teoria_das_cordas.pdf",image:"images/teoria_das_cordas.jpeg"}
 	];
 
