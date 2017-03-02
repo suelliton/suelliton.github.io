@@ -1,8 +1,8 @@
 
-    $("#teste").click(function () {
-            $("#video1").hide();            
+    $('#teste').click(function () {
+            $("#oi").hide();            
                        
         });        
-   	$('iframe').click(function() {
-   			$("#video1").show();
+   	$('#if').click(function() {
+   			$("#oi").show();
    	});
