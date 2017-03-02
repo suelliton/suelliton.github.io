@@ -15,8 +15,8 @@ angular.module("books").controller("books_controller",function($scope) {
 		$("iframe").attr('height','100');
 	}
 	$scope.clicked = function(book){
-		$scope.book_show = book;
-		
+		$scope.book_show = book;	
+		$('#input').attr('value',45);	
 	}
 	
 
