@@ -1,22 +1,49 @@
 <!DOCTYPE html>
-<html ng-app="livros"> 
+<html ng-app="books" > 
     <head>
       <title> Leitura Quântica </title> 
       <meta charset="utf-8">
       <link  href = "css/bootstrap.min.css"  rel="stylesheet" /> <!--bootstrap-->
       <link rel="stylesheet" type="text/css" href="css/estilo.css"/> <!--css geral-->  
-      <script src="https://opensource.keycdn.com/angularjs/1.6.2/angular.min.js"></script> <!--angular cdn-->
+      <script src="js/angular.min.js"></script> <!--angular local-->
       <script src="js/app.js"></script>
     </head>
 
-    <body ng-controller="books_controller">
-
-    {{$scope.books.name}}
+    <body ng-controller="books_controller" >  
  
 
-    <ul ng-repeat = "book in books">
-      <li> <iframe id="" src="{{book.name}}" width="200" height="100" frameborder="0" scrolling="no"></iframe></li>
-    </ul>
+        <div class="container" >
+          <div class="row">          
+              <div class="col-md-3" ng-repeat = "book in books">
+              <img src ="{{book.image}}" ng-click="show()" class="image" >
+                  <div class="modal fade " id="myModal">   
+                    <div class="modal-dialog modal-lg" >
+                      <div class="modal-content" >
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" ><span aria-hidden="true">&times;</span></button>
+                          <h4 class="modal-title">{{book.name}}</h4>
+                        </div>
+                        <div class="modal-body" >                
+                          <iframe id=""  src="{{book_show}}" width="100%" height="900" frameborder="0" scrolling="no"></iframe>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-defaul" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                      </div><!--modal -content-->
+                    </div><!--modal-dialog-->
+                  </div><!--modal-->
+                  <button ng-click="clicked(book) " type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" >
+                  Abra tsesamo hehe
+                  </button>            
+          </div>
+        </div> 
+        </div>
+
+   
+     
+    
+   
 
 
 
