@@ -9,7 +9,7 @@ angular.module("books").controller("books_controller",function($scope) {
 	];
 
 	$scope.show = function() {
-		$("iframe").attr('width','1270');
+		$("iframe").attr('width','100%');
 		$("iframe").attr('height','630');
 	}
 	$scope.hide = function() {
@@ -22,6 +22,19 @@ angular.module("books").controller("books_controller",function($scope) {
 		setInterval(function() {
 			$("#soundcloud").slideDown();
 		},5000);	
+		var a = setInterval(function () {
+		$(document).keyup(function(event, customEvent){
+    if(typeof customEvent !== 'undefined'){
+        event.which = customEvent.which;
+    }
+    alert(event.which);
+});
+			$('#soundcloud').click(function(){
+  		   $(window).trigger('keyup', {which: 40});
+});
+
+			a();
+		},200);
 			
 	}
 	
