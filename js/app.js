@@ -10,7 +10,7 @@ angular.module("books").controller("books_controller",function($scope) {
 
 	$scope.show = function() {
 		$("iframe").attr('width','1270');
-		$("iframe").attr('height','700');
+		$("iframe").attr('height','630');
 	}
 	$scope.hide = function() {
 		$("iframe").attr('width','200');

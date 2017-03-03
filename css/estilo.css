@@ -23,7 +23,8 @@ h1{
 	margin-top: -10px;
 }
 .modal-body{
-	height: 600px;
+	height: 650px;
+	width: 1000px;
 }
 .image{
 	width: 250px;
@@ -37,7 +38,8 @@ h1{
 }
  #soundcloud{
  	height: 260px;
+
  }
- #topo{
- 	
+ #icone_pra_baixo{
+ 	margin-left: 50%;
  }

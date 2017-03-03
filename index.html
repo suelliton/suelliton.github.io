@@ -58,15 +58,24 @@
                   <div class="modal fade " id="myModal">   
                     <div class="modal-dialog modal-lg" >
                       <div class="modal-content" >
-                        <div class="modal-header">
-                          <div id="player" class="text-right">
-                               Rádio Online
-                             <audio class="player"  controls="controls">
-                               <source src="http://stm37.srvstm.com:10112/;stream.mp3" type="audio/mpeg" />
-                             </audio>﻿
-                            </div>
-                          <button type="button" class="close" data-dismiss="modal" ><span aria-hidden="true">&times;</span></button>        
-                            <h4 class="modal-title">{{book_show.name}}</h4>
+                        <div class="modal-header">  
+                        <div class="row">
+                          <div class="col-md-4">
+                             <h4 class="modal-title">{{book_show.name}} <!--Titulo--> 
+                          </div>
+                          <div class="col-md-4">  <!--Icone--> 
+                            <a href="#pdf" id="icone_pra_baixo" ><img src="icons/icone_pra_baixo.png" width="20" height="20"></a></h4>
+                          </div>
+                          <div class="col-md-4">
+                                <div id="player" class="text-right">
+                                   Rádio Online
+                                 <audio class="player"  controls="controls">
+                                   <source src="http://stm37.srvstm.com:10112/;stream.mp3" type="audio/mpeg" />
+                                 </audio>﻿
+                                </div>
+                                 <button type="button" class="close" data-dismiss="modal" ><span aria-hidden="true">&times;</span></button>   
+                           </div>
+                        </div>                          
 
                         </div>
                         <div class="modal-body" >  
