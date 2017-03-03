@@ -4,14 +4,54 @@
       <title> Leitura Quântica </title> 
       <meta charset="utf-8">
       <link  href = "css/bootstrap.min.css"  rel="stylesheet" /> <!--bootstrap-->
-      <link rel="stylesheet" type="text/css" href="css/estilo.css"/> <!--css geral-->  
+     
       <script src="js/angular.min.js"></script> <!--angular local-->
       <script src="js/app.js"></script>
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      
+       <link rel="stylesheet" type="text/css" href="css/estilo.css"/> <!--css geral-->  
     </head>
 
-    <body ng-controller="books_controller" >      
+    <body ng-controller="books_controller" >     
+   
 
+    <div id="container_menu" >
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Ascenção Planetária</a></li>
+        <li><a href="#">Budismo/Hinduísmo</a></li>
+        <li><a href="#">Ciência</a></li>
+        <li><a href="#">Hérmetismo</a></li>
+        <li><a href="#">Hélio Couto</a></li>
+        <li><a href="#">Mestres Ascensos</a></li>
+        <li><a href="#">Extra-Terrestres</a></li>
+        <li><a href="#">Saúde/Médicina</a></li>
+        <li><a href="#">Teosofia</a></li>
+        <li><a href="#">Xamanismo</a></li>
+        <li><a href="#">Yoga</a></li>
+        <li><a href="#">Outros</a></li>         
+      </ul>
+      <form class="navbar-form navbar-left">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
       
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+
+
+
+
+
+       
+      
+
+
         <div class="container" >
           <div class="row">          
               <div class="col-md-3" ng-repeat = "book in books">             
@@ -19,16 +59,23 @@
                     <div class="modal-dialog modal-lg" >
                       <div class="modal-content" >
                         <div class="modal-header">
-                          <button type="button" class="close" data-dismiss="modal" ><span aria-hidden="true">&times;</span></button>
-                          <h4 class="modal-title">{{book_show.name}}</h4>
-                             <div id="player" class="text-right">
+                          <div id="player" class="text-right">
+                               Rádio Online
                              <audio class="player"  controls="controls">
                                <source src="http://stm37.srvstm.com:10112/;stream.mp3" type="audio/mpeg" />
                              </audio>﻿
                             </div>
+                          <button type="button" class="close" data-dismiss="modal" ><span aria-hidden="true">&times;</span></button>        
+                            <h4 class="modal-title">{{book_show.name}}</h4>
+
                         </div>
-                        <div class="modal-body" >                
-                          <iframe id=""  src="{{book_show.pdf}}"  frameborder="0" scrolling="no"></iframe>
+                        <div class="modal-body" >  
+                          <div id="soundcloud">
+                              <iframe width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/27096209&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=false"></iframe>
+                            </div>
+                            
+                                 
+                          <iframe id="pdf"  src="{{book_show.pdf}}"  frameborder="0" scrolling="no"></iframe>
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-defaul" data-dismiss="modal">Close</button>
@@ -54,5 +101,6 @@
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> <!--jquery cdn-->
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script src="js/efeitos.js"></script>  
+   
   </body> 
 </html>
