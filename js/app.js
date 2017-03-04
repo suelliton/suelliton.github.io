@@ -1,7 +1,8 @@
-angular.module("books",[]);
- 
-angular.module("books").controller("books_controller",function($scope,$http) {	
-	
+var app = angular.module("books",[]);
+
+angular.module("books").controller("books_controller",function($scope,$http) {		
+
+
 	$scope.carregar = function () {
 	$http.get('https://www.dropbox.com/s/wik2e3uc5hv8o3c/teste.json?dl=1').then(function (success){
    		console.log("funfou"); 
@@ -72,3 +73,4 @@ $scope.books = [
 
 
 });
+ 
