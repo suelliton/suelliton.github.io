@@ -38,5 +38,22 @@
 
  }
  #icone_pra_baixo{
- 	margin-left: 50%;
+ 	
  }
+a:link {
+color:#FF0000;
+text-decoration:none;
+}
+a:visited {
+color:#999999;
+text-decoration:none;
+}
+a:hover {
+color:#000000;
+text-decoration:none;
+}
+a:active {
+color:#000000;
+text-decoration:none;
+
+}

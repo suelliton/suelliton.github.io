@@ -23,10 +23,16 @@ angular.module("books").controller("books_controller",function($interval,$timeou
    		var jsObj = angular.fromJson(success);  		
    		$scope.books = jsObj.data.books;
    		console.log($scope.books);
-   	
-   		$interval(function() {
-   			$scope.load = $scope.load + 10;
-   		},200);
+   		
+   		var intervalo = 100;
+   		$interval(function(){ 
+   			if($scope.load < 100){  			
+   				$scope.load = $scope.load + 10; 
+   				}else{
+   					intervalo = 1000000;
+   				}  			
+   		},intervalo);			
+   			
 		$timeout(function () {
    			$scope.carregando = false;
    		}, 2000);
@@ -56,13 +62,15 @@ angular.module("books").controller("books_controller",function($interval,$timeou
 		$scope.book_show = book;
 		console.log($scope.book_show.name);
 		$("#soundcloud").hide();		
-		setInterval(function() {
-			$("#soundcloud").slideDown();
-		},5000);	
-		var a = setInterval(function () {		
-
-			
-		},200);			
+		$timeout(function() {
+			$("#soundcloud").slideDown("slow");
+		},1000);	
+		$timeout(function() {
+			$("#pdf").fadein(1000);
+		},100);			
+		$timeout(function() {
+			$("#player").fadein(10000);
+		},1000);	
 	}
 	
 
