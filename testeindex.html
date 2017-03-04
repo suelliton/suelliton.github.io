@@ -74,7 +74,10 @@
                              <h4 class="modal-title">{{book_show.name}} <!--Titulo--> 
                           </div>
                           <div class="col-md-4">  <!--Icone--> 
-                            <a href="#pdf" id="icone_pra_baixo" ><img src="icons/icone_pra_baixo.png" width="20" height="20"></a></h4>
+                              <div class="text-center">
+                                <a href="#pdf"  class="text-center"><span>Descer</span></a><br>
+                                <a href="#pdf" class="text-center"><img src="icons/icone_pra_baixo.png" width="20" height="20" class="text-center"></a>
+                              </div>  
                           </div>
                           <div class="col-md-4">
                                 <div id="player" class="text-right">
@@ -92,9 +95,9 @@
                           <div id="soundcloud">
                               <iframe width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/27096209&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=false"></iframe>
                             </div>
-                            
-                                
-                          <iframe id="pdf"  src="{{book_show.pdf}}"  frameborder="0" scrolling="no"></iframe>
+                            <div id="pdf">
+                                <iframe  src="http://docs.google.com/gview?url=https://www.dropbox.com/s/i2xub23s9tua22l/Primeiros%20Passos%20com%20Dropbox.pdf?dl=1&embedded=true" scrolling="no"  frameborder="0"></iframe>
+                            </div>
                         </div>                      
                       </div><!--modal -content-->
                     </div><!--modal-dialog-->
