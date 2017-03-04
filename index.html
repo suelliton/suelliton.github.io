@@ -12,13 +12,13 @@
     <body ng-controller="books_controller" > 
   
 
-    <div id="container_menu" >  
+    <div id="container_menu" class="container">  
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
-          <li><a href="#">Ascenção Planetária</a></li>
-          <li><a href="#">Budismo/Hinduísmo</a></li>
-          <li><a href="#">Ciência</a></li>
+          <li class="active"><a href="file:///home/suelliton/suelliton.github.io/index.html" ng-click="carregar(1)">Home <span class="sr-only">(current)</span></a></li>
+          <li><a href="#" ng-click="carregar(2)">Ascenção Planetária</a></li>
+          <li><a href="#" ng-click="carregar(3)">Budismo/Hinduísmo</a></li>
+          <li><a href="#" ng-click="carregar(ciencia)">Ciência</a></li>
           <li><a href="#">Hérmetismo</a></li>
           <li><a href="#">Hélio Couto</a></li>
           <li><a href="#">Mestres Ascensos</a></li>
@@ -33,16 +33,32 @@
           <div class="form-group">
             <input type="text" class="form-control" placeholder="Search">
           </div>
-            <button type="submit" ng-click="carregar()"  class="btn btn-default">Submit</button>
+            <button type="submit" ng-click="carregar(home)"  class="btn btn-default">Submit</button>
         </form>      
       </div><!-- /.navbar-collapse -->
    </div><!-- /.container-fluid -->
 
 
+    <h1 ng-bind="categoria" ng-show="!carregando"></h1><h1 ng-show="carregando">Carregando...</h1>
+    <div class="progress"  ng-show="carregando" >
+      <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{load}}"
+      aria-valuemin="0" aria-valuemax="100" style="width:{{load}}%">
+        <span class="sr-only">70% Complete</span>
+      </div>
+    </div>
 
 
 
-        <div class="container" >
+
+
+
+
+
+
+
+    <!--fotos pdfs janela leitura-->
+
+        <div class="container" ng-show="!carregando">
           <div class="row">          
               <div class="col-md-3" ng-repeat = "book in books">             
                   <div class="modal fade " id="myModal">   
@@ -59,7 +75,7 @@
                           <div class="col-md-4">
                                 <div id="player" class="text-right">
                                    Rádio Online
-                                  <audio class="player" autoplay="autoplay" controls="controls">
+                                  <audio class="player"  controls="controls">
                                      <source src="http://stm37.srvstm.com:10112/;stream.mp3" type="audio/mpeg" />
                                   </audio>﻿
                                 </div>
@@ -79,7 +95,7 @@
                       </div><!--modal -content-->
                     </div><!--modal-dialog-->
                   </div><!--modal-->
-                  <button ng-click="clicked(book) " type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" >
+                  <button ng-click="clicked(book) " type="button" class="btn btn-lg" data-toggle="modal" data-target="#myModal" >
                  <img src="{{book.image}}" ng-click="show()" class="image" >
                   </button>            
           </div>
