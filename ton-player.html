@@ -423,12 +423,12 @@
                             <li class="active">
                                 <a href="#p-view-1" role="tab" data-toggle="tab">Linux</a>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <a href="#p-view-2" role="tab" data-toggle="tab">Windows</a>
                             </li>                          
                             <li>
                                 <a href="#p-view-3" role="tab" data-toggle="tab">Android</a>
-                            </li>                          
+                            </li>                           -->
                         </ul>
                     </div>
                     <div class="tab-content">
@@ -438,40 +438,31 @@
                                     <h4>Step by step</h4>
                                     <ol>
                                         <li>
-                                            Download the .deb file from <a target="_blank" href="https://mega.nz/file/641zBZbR#V79M7ZojErlDFbT0HkFHgMM0a_ISK8kJ5yukUyjhpQs">Ton-Player-1.0.deb</a>
+                                            Download the .deb file from <a target="_blank" href="https://mega.nz/file/HklR3TjS#W4-TGh0XDcjYW7XXjgLWyip5-Vy95LVGi6dehfpkU5U">Ton-Player-1.3.deb</a>
+                                        </li>                                        
+                                        <li>
+                                            Download the setup_linux.sh file from <a target="_blank" href="https://mega.nz/file/HwFk2KTC#f9abzhrjhELGXBKsZiez1u1jdgMWtrivj3BCOBjOvsQ">setup_linux.sh</a>
                                         </li>                                        
                                         <li>
                                             install clicking in the file or with the command:
-                                            <p>$<strong> sudo dpkg -i Ton-Player-1.0.deb</strong></p>
+                                            <p>$<strong> sudo dpkg -i Ton-Player-1.3.deb</strong></p>
                                         </li>
                                         <li>
-                                            Update the system:
-                                            <p>$<strong> sudo apt update</strong></p>
+                                            open the terminal and enter the directory where you downloaded setup_linux.sh, normally:
+                                            <p>$<strong> cd ŨSER/Downloads</strong></p>
                                         </li>
                                         <li>
-                                            Install libmpv-dev used for the flet:
-                                            <p>$<strong> sudo apt install libmpv-dev</strong></p>
+                                            Give permission to run setup_linux.sh:
+                                            <p>$<strong> sudo chmod +x setup_linux.sh</strong></p>
                                         </li>
                                         <li>
-                                            Create a simbol link for the installed library:
-                                            <p>$<strong> sudo ln -s /lib/x86_64-linux-gnu/libmpv.so.2 /lib/x86_64-linux-gnu/libmpv.so.1</strong></p>
-                                        </li>
+                                            Run the setup_linux.sh:
+                                            <p>$<strong> sudo ./setup_linux.sh</strong></p>
+                                        </li> 
                                         <li>
-                                            Install pip manager packages from python:
-                                            <p>$<strong> sudo apt install python3-pip</strong></p>
-                                        </li>
-                                        <li>
-                                            Configure pip to works without virtualenv:
-                                            <p>$<strong> python3 -m pip config set global.break-system-packages true</strong></p>
-                                        </li>
-                                        <li>
-                                            Use pip to install SpotDL packages:
-                                            <p>$<strong> pip install spotdl</strong></p> or 
-                                            <p>$<strong> pip3 install spotdl</strong></p> 
-                                        </li>
-                                        <li>
-                                            Restart the system to make all works
-                                        </li>
+                                            Run the first time using terminal to see logs and identify possible problems:
+                                            <p>$<strong> ton-player</strong></p>
+                                        </li> 
                                         <li>Search the Ton Player in app menu</li>
                                         <li><strong>Enjoy!!!</strong></li>
                                     </ol>
